@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+body {
+    background-color: rgb(221, 4, 221);
+    color: black;
+    font-family: 'Roboto' sans-serif;
+}
+.contenedor{
+    height: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "imagen texto texto"
+                         "pie-de-pagina pie-de-pagina pie-de-pagina";
+                          
+
+}
+.contenedor> div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .imagen,
+.contenedor .pie-de-pagina {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;  
+}
+.contenedor .header{
+    background-color: blue;
+    color: white;
+    grid-area: header ;
+    text-align: center;
+}
+.contenedor .contenido{
+    background-color:white;
+    grid-area: contenido;
+    
+}
+#menuinicio{
+    background-color: blue;
+    font-size: 25px; 
+    text-align: center;  
+}
+
+#menuinicio ul li{
+    margin: 2px;
+    color:white;  
+    display: inline-block;
+}
+.contenedor .texto{
+    grid-area: texto;
+    background: cyan;
+     
+}
+.contenedor .imagen{
+    grid-area: imagen;
+    font-size: 9px;
+   
+}
+.contenedor .imagen{
+    background-image: url(img/imagen\ alta\ gracia.jpg);
+    height: 150px;
+    width: 200px;
+}
+.contenedor .pie-de-pagina{
+    background-color: blue;
+    color: white;
+    grid-area: pie-de-pagina;
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    body{ 
+        background-color: darkred;
+    }
+    .contenedor{
+        grid-template-areas: "header header header"
+        "contenido contenido contenido"
+        "texto texto texto"
+        "imagen imagen imagen"
+        "pie-de-pagina pie-de-pagina pie-de-pagina";
+    }   
+}
+
+
+/* quienes somos */
+
+
+.contenedor{
+    height: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, 1fr);
+}
+.contenedor> div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .cuerpo,
+.contenedor .footer {
+    
+    padding: 20px;
+    border-radius: 4px;  
+}
+.contenedor .cuerpo{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+#footer{
+    background-color: blue;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+}
+
