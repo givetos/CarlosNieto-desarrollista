@@ -4,7 +4,7 @@
 }
  
 body {
-    background-color: rgb(221, 4, 221);
+    background-image: radial-gradient(blue,red);
     color: black;
     font-family: 'Roboto' sans-serif;
 }
@@ -89,36 +89,4 @@ body {
 }
 
 
-/* quienes somos */
-
-
-.contenedor{
-    height: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(3, 1fr);
-}
-.contenedor> div,
-.contenedor .header,
-.contenedor .contenido,
-.contenedor .cuerpo,
-.contenedor .footer {
-    
-    padding: 20px;
-    border-radius: 4px;  
-}
-.contenedor .cuerpo{
-    grid-column-start: 1;
-    grid-column-end: -1;
-}
-#footer{
-    background-color: blue;
-    color: white;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    text-align: center;
-}
 
